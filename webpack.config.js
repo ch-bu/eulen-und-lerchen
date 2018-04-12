@@ -9,7 +9,7 @@ module.exports = {
   },
   output: {
     filename: 'js/[name].js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     publicPath: '/'
   },
   devServer: {
@@ -24,9 +24,21 @@ module.exports = {
         exclude: path.resolve(__dirname, 'node_modules'),
         options: {
           babelrc: false,
-          presets: ['es2017', 'react']
+          presets: ['es2017', 'react', 'es2015']
         }
-      }
+      },
+      {
+        test: /\.scss?$/,
+        loader: 'style-loader!css-loader!sass-loader'
+      },
+      // {
+      //   test: /\.css?$/,
+      //   loader: 'file-loader',
+      //   include: path.resolve(__dirname, 'app/css'),
+      //   options: {
+      //     outputPath: 'css/'
+      //   }
+      // }
     ]
   },
   plugins: [
