@@ -60,12 +60,12 @@ nav {
         	transition: height 0.1s;
         }
 
-        &.active {
-          background-color: #fff;
-        }
-
         &:hover {
           background-color: rgba(0,0,0,0.2);
+        }
+
+        &.active {
+          background-color: #fff;
         }
       }
     }
