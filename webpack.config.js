@@ -31,6 +31,14 @@ module.exports = {
         test: /\.scss?$/,
         loader: 'style-loader!css-loader!sass-loader'
       },
+      {
+        test: /\.(jpe?g|gif|png)$/,
+        include: path.resolve(__dirname, 'app/images'),
+        loader: "file-loader",
+        options: {
+          outputPath: 'img/'
+        }
+      },
       // {
       //   test: /\.css?$/,
       //   loader: 'file-loader',
