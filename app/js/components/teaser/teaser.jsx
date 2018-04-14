@@ -1,5 +1,5 @@
 import React from 'react';
-import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 import sleepImage from '../../../images/sleep.jpg';
 
 class Teaser extends React.Component {
@@ -10,9 +10,17 @@ class Teaser extends React.Component {
   render() {
     return (
       <div id="index">
-      <section id="teaser">
-          <h1>Von Eulen und Lerchen</h1>
-      </section>
+      <Fade duration={6000}>
+        <section id="teaser">
+            <div id="teaser-text">
+              <h1>Von Eulen und Lerchen</h1>
+              <p>Jede Nacht zwingt uns ein innerer Taktgeber
+                dazu, die Augen zu schließen und zu schlafen. Der Schlaf
+                wird uns diktiert, ohne, dass wir auf ihn Einfluss
+                 nehmen können. Aber warum?</p>
+            </div>
+        </section>
+      </Fade>
 
       <section id="taktgeber">
         <p>Jede Nacht zwingt uns ein innerer Taktgeber
@@ -21,13 +29,13 @@ class Teaser extends React.Component {
            darauf nehmen können.</p>
       </section>
 
-      <Zoom duration={3000}>
+      <Fade duration={3000}>
         <section id="test" ref="box1">
 
             <p>Das ist ein Test</p>
 
         </section>
-      </Zoom>
+      </Fade>
     </div>
     )
   }

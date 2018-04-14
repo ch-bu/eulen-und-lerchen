@@ -1,18 +1,38 @@
 #index {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 10fr 1fr;
   grid-template-rows: minmax(50vh, 100vh) minmax(200px, 2fr) minmax(500px, 2fr);
   grid-template-areas: "teaser teaser teaser"
                        ". taktgeber ."
                        "test test test";
 
-
+   @media screen and (min-width: $mid-screen) {
+     grid-template-columns: 1fr 3fr 1fr;
+     grid-template-areas: "teaser teaser teaser"
+                          ". taktgeber ."
+                          "test test test";
+   }
 
   #teaser {
     grid-area: teaser;
     text-align: center;
     background-image: url("../images/sleep.jpg");
-    fill: object-fit;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20% 50%;
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: 10px auto;
+    grid-template-areas: ". . ."
+                         ". teaser-text .";
+
+    #teaser-text {
+      grid-area: teaser-text;
+    }
+
+    @media screen and (min-width: $mid-screen) {
+      background-position: 50% 50%;
+    }
   }
 
   #taktgeber {
@@ -28,8 +48,5 @@
   // margin: 0 10vw;
   // margin-top: 10vh;
   //
-  // @media screen and (min-width: $mid-screen) {
-  //   margin: 0 20vw;
-  //   margin-top: 10vh;
-  // }
+
 }
