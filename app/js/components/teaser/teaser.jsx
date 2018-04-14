@@ -22,19 +22,21 @@ class Teaser extends React.Component {
         </section>
       </Fade>
 
-      <Fade duration={8000}>
+
       <section id="taktgeber">
-        <div className="clock">
-          <div className="hours-container">
-            <div className="hours"></div>
+        <Fade duration={8000}>
+          <div className="clock">
+            <div className="hours-container">
+              <div className="hours"></div>
+            </div>
+            <div className="minutes-container">
+              <div className="minutes"></div>
+            </div>
+            <div className="seconds-container">
+              <div className="seconds"></div>
+            </div>
           </div>
-          <div className="minutes-container">
-            <div className="minutes"></div>
-          </div>
-          <div className="seconds-container">
-            <div className="seconds"></div>
-          </div>
-        </div>
+        </Fade>
 
         <div className="taktgeber-text">
           <p>Nicht jede Person schläft gleich lang und zur
@@ -52,7 +54,7 @@ class Teaser extends React.Component {
            den wir unser Leben anpassen müssen.</p>
         </div>
       </section>
-      </Fade>
+
 
       <Fade duration={3000}>
         <section id="test" ref="box1">
