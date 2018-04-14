@@ -1,10 +1,27 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import sleepImage from '../../../images/sleep.jpg';
+import dog from '../../../images/animals/dog.png';
+import hahn from '../../../images/animals/hahn.png';
+import elefant from '../../../images/animals/elefant.png';
+import horse from '../../../images/animals/horse.png';
 
 class Teaser extends React.Component {
   constructor(props) {
     super(props);
+
+    this.animals = [["Hund", dog, "12,9"],
+                    ["Hahn", hahn, "11,7"],
+                    ["Elefant", elefant, "3,9"],
+                    ["Pferd", horse, "2,9"]];
+
+    this.animal_boxes = this.animals.map((animal) => {
+      return <div key={animal[0]}>
+        <h2>{animal[0]}</h2>
+        <img src={animal[1]} alt={animal[0]} />
+        <p>{animal[2]}</p>
+      </div>
+    });
   }
 
   render() {
@@ -44,7 +61,7 @@ class Teaser extends React.Component {
           Eulen gehen spät in's Bett stehen spät auf.
           Lerchen stehen früh auf und gehen früh in's Bett. </p>
         <p>Vielen Personen fällt es allerdings verflixxt schwer, gegen ihren
-          Rhyhtmus zu schlafen. Wie viele Eulen wollten nicht schon
+          Rhythmus zu schlafen. Wie viele Eulen wollten nicht schon
           zu Frühaufstehern werden und sind schon in der Schule gescheitert?
           Wie viele Lerchen wollten schon einmal lange Feiern gehen, ohne bereits
           um 10 Uhr müde zu sein?</p>
@@ -57,23 +74,12 @@ class Teaser extends React.Component {
 
 
       <Fade duration={3000}>
-        <section id="test" ref="box1">
-
-            <p>Das ist ein Test</p>
-
+        <section id="animals">
         </section>
       </Fade>
     </div>
     )
   }
-
-  // componentDidMount() {
-  //   // window.sr = ScrollReveal({reset: true});
-  //   // sr.reveal(this.refs.box1, { duration: 3000, distance: "20px",
-  //   //                        origin: 'top', opacity: 0.1});
-  //   ScrollReveal().reveal(this.refs.box1, { duration: 3000, distance: "20px",
-  //                          origin: 'top', opacity: 0.1});
-  // }
 }
 
 export default Teaser;
