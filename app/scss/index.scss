@@ -31,8 +31,9 @@
     }
 
     @media screen and (min-width: $mid-screen) {
+      grid-template-rows: 5em auto;
       background-position: 50% 30%;
-      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-columns: 2fr 2fr 1fr;
     }
   }
 
