@@ -3,6 +3,10 @@ $mid-screen: 1000px;
 $max-screen: 1366px;
 $min-value: 18px;
 $max-value: 34px;
+$padding-wrapper: 1fr 10fr 1fr;
+$padding-up-bottom: 4rem;
+
+$color-main: #20232a;
 
 @mixin interpolate($properties, $min-screen, $max-screen, $min-value, $max-value) {
 	& {
@@ -39,12 +43,9 @@ $max-value: 34px;
 }
 
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
   }
 }
 
@@ -53,8 +54,8 @@ html {
 }
 
 body {
-  // background-color: #20232a;
-	background-color: #000;
+  background-color: $color-main;
+	// background-color: #000;
   margin: 0;
   color: #fff;
   font-family: 'Poiret One', cursive;
@@ -65,7 +66,12 @@ h1,h2,h3,h4,h5 {
 	@include interpolate((padding-top, padding-bottom), 20rem, 70rem, 0rem, .5rem);
 }
 
+h1 {
+	margin-bottom: 0.2em;
+}
+
 p  {
+	margin-top: 0.2em;
   font-size: 1rem;
 }
 

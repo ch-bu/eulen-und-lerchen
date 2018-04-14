@@ -22,12 +22,37 @@ class Teaser extends React.Component {
         </section>
       </Fade>
 
+      <Fade duration={8000}>
       <section id="taktgeber">
-        <p>Jede Nacht zwingt uns ein innerer Taktgeber
-          dazu, die Augen zu schließen und zu schlafen. Es scheint als
-           wird uns dieser Rhythmus diktiert, ohne, dass wir Einfluss
-           darauf nehmen können.</p>
+        <div className="clock">
+          <div className="hours-container">
+            <div className="hours"></div>
+          </div>
+          <div className="minutes-container">
+            <div className="minutes"></div>
+          </div>
+          <div className="seconds-container">
+            <div className="seconds"></div>
+          </div>
+        </div>
+
+        <div className="taktgeber-text">
+          <p>Nicht jede Person schläft gleich lang und zur
+          gleichen Uhrzeit. Der Volksmund spricht von Eulen und Lerchen.
+          Eulen gehen spät in's Bett stehen spät auf.
+          Lerchen stehen früh auf und gehen früh in's Bett. </p>
+        <p>Vielen Personen fällt es allerdings verflixxt schwer, gegen ihren
+          Rhyhtmus zu schlafen. Wie viele Eulen wollten nicht schon
+          zu Frühaufstehern werden und sind schon in der Schule gescheitert?
+          Wie viele Lerchen wollten schon einmal lange Feiern gehen, ohne bereits
+          um 10 Uhr müde zu sein?</p>
+        <p>Es fällt uns so schwer, weil wir nur geringe Kontrolle
+           über unseren inneren Taktgeber haben. Es ist fasst so,
+           als hätte uns die Natur einen Schlafrhyhtmus diktiert, um
+           den wir unser Leben anpassen müssen.</p>
+        </div>
       </section>
+      </Fade>
 
       <Fade duration={3000}>
         <section id="test" ref="box1">

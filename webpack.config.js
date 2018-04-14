@@ -32,7 +32,7 @@ module.exports = {
         loader: 'style-loader!css-loader!sass-loader'
       },
       {
-        test: /\.(jpe?g|gif|png)$/,
+        test: /\.(jpe?g|gif|png|svg)$/,
         include: path.resolve(__dirname, 'app/images'),
         loader: "file-loader",
         options: {
