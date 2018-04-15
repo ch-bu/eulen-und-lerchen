@@ -1,5 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
+import { NavLink } from 'react-router-dom';
 import sleepImage from '../../../images/sleep.jpg';
 import dog from '../../../images/animals/dog.png';
 import hahn from '../../../images/animals/hahn.png';
@@ -45,8 +46,12 @@ class Teaser extends React.Component {
           </section>
         </Fade>
 
-
       <section id="taktgeber">
+
+        <div className="taktgeber-heading">
+          <h2>Der innere Taktgeber</h2>
+        </div>
+        
         <Fade duration={9000}>
           <div className="clock">
             <div className="hours-container">
@@ -61,8 +66,8 @@ class Teaser extends React.Component {
           </div>
         </Fade>
 
+
         <div className="taktgeber-text">
-          <h2>Der innere Taktgeber</h2>
           <p>Nicht jede Person schläft gleich lang und zur
           gleichen Uhrzeit. Der Volksmund spricht von Eulen und Lerchen.
           Eulen gehen spät in's Bett stehen spät auf.
@@ -76,20 +81,37 @@ class Teaser extends React.Component {
            über unseren inneren Taktgeber haben. Es ist fasst so,
            als hätte uns die Natur einen Schlafrhyhtmus diktiert, um
            den wir unser Leben anpassen müssen.</p>
-        </div>
+       </div>
       </section>
-
 
       <section id="animals">
         <div id="animals-text">
           <h2>Der Taktgeber der Tiere</h2>
           <p>Das Menschen sich in ihrem inneren Taktgeber unterscheiden,
           ist nicht verwunderlich, wenn wir uns vor Augen führen,
-          dass sich Tiere dramatisch in ihrer Schlafdauer unterscheiden:</p>
+          dass sich Tiere dramatisch in ihrer Schlafdauer unterscheiden.
+          Dabei kommt es weniger auf die Tierart als auf die Größe eines
+          Tieres an. Große Tiere schlafen in der Regel kürzer
+          als kleine Tiere.</p>
         </div>
 
         <div id="animals-box">
           {this.animal_boxes}
+        </div>
+      </section>
+
+      <section id="chronotypen">
+        <div className="content">
+          <h1>Eulen und Lerchen, was ist dran?</h1>
+          <p>Tatsächlich schlafen die extremen Lerchen unten
+          den Menschen so lange wie ein Pferd im Durchschnitt. Die
+          extremen Eulen wiederum schlafen Nacht für Nacht so lange
+          wie ein Hund. Was ist aber dran an dem Gedanken, dass
+          sich Menschen in Eulen und Lerchen aufteilen lassen?
+          Ist die eine Hälfte der Menschen notorisch früh auf und
+          die andere notorisch spät? Bleiben wir für immer eine
+          Lerche oder spielt das Geschlecht oder das Alter eine
+          Rolle?</p>
         </div>
       </section>
     </div>

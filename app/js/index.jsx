@@ -17,7 +17,8 @@ class Application extends React.Component {
         <nav>
           <ul>
             <li><NavLink activeClassName='active' exact to="/">Home</NavLink></li>
-            <li><NavLink activeClassName='active' to="/eulenundlerchen">Test</NavLink></li>
+            <li><NavLink activeClassName='active'
+              to="/eulenundlerchen">Eulen und Lerchen</NavLink></li>
             <li><NavLink activeClassName='active' to="/test">Test</NavLink></li>
             <li><NavLink activeClassName='active' to="/test2">Test</NavLink></li>
           </ul>
