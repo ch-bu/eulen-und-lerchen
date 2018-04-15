@@ -1,10 +1,10 @@
 #index {
   display: grid;
   grid-template-columns: $padding-wrapper;
-  grid-template-rows: minmax(50vh, 100vh) minmax(200px, 2fr) minmax(500px, 2fr);
+  grid-template-rows: minmax(50vh, 100vh) minmax(200px, auto) minmax(500px, auto);
   grid-template-areas: "teaser teaser teaser"
                        "taktgeber taktgeber taktgeber"
-                       "test test test";
+                       "animals animals animals";
 
    @media screen and (min-width: $mid-screen) {
      grid-template-columns: 1fr 3fr 1fr;
@@ -135,14 +135,50 @@
 
   }
 
-  #test {
+  #animals {
     grid-area: animals;
-    background-color: #983433;
+    background-color: $color-main;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: $padding-wrapper;
+    grid-template-areas: ". animals-text ."
+                         ". animals-box .";
+
+     @media screen and (min-width: $mid-screen) {
+       grid-template-columns: 2fr 6fr 2fr;
+     }
+
+    #animals-text {
+      grid-area: animals-text;
+    }
+
+    #animals-box {
+      grid-area: animals-box;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      div {
+        width: 100%;
+        height: auto;
+        margin: 1em 0;
+        border: 1px solid #ccc;
+        padding: 15px;
+
+        @media screen and (min-width: $mid-screen) {
+          width: 28%;
+        }
+
+        img {
+          max-width: 100%;
+        }
+
+        p {
+          text-align: center;
+        }
+      }
+    }
+
   }
-
-  // text-align: center;
-  // margin: 0 10vw;
-  // margin-top: 10vh;
-  //
-
 }
