@@ -21,8 +21,8 @@ class Teaser extends React.Component {
                     ["Kuh", cow, "3,9"]];
 
     this.animal_boxes = this.animals.map((animal) => {
-      return <Fade duration={4000}>
-        <div key={animal[0]}>
+      return <Fade key={animal[0]} duration={3000}>
+        <div >
           <h3>{animal[0]}</h3>
           <p>{animal[2]} Stunden</p>
           <img src={animal[1]} alt={animal[0]} />
@@ -34,14 +34,13 @@ class Teaser extends React.Component {
   render() {
     return (
       <div id="index">
-        <Fade duration={6000}>
+        <Fade duration={3000}>
           <section id="teaser">
               <div id="teaser-text">
                 <h1>Von Eulen und Lerchen</h1>
                 <p>Jede Nacht zwingt uns ein innerer Taktgeber
-                  dazu, die Augen zu schließen und zu schlafen. Der Schlaf
-                  wird uns diktiert, ohne, dass wir auf ihn Einfluss
-                   nehmen können. Aber warum?</p>
+                  dazu, die Augen zu schließen und zu schlafen. Manche
+                  Menschen schlafen früh, andere spät. Aber warum?</p>
               </div>
           </section>
         </Fade>
@@ -51,8 +50,8 @@ class Teaser extends React.Component {
         <div className="taktgeber-heading">
           <h2>Der innere Taktgeber</h2>
         </div>
-        
-        <Fade duration={9000}>
+
+        <Fade duration={3000}>
           <div className="clock">
             <div className="hours-container">
               <div className="hours"></div>
@@ -70,7 +69,7 @@ class Teaser extends React.Component {
         <div className="taktgeber-text">
           <p>Nicht jede Person schläft gleich lang und zur
           gleichen Uhrzeit. Der Volksmund spricht von Eulen und Lerchen.
-          Eulen gehen spät in's Bett stehen spät auf.
+          Eulen gehen spät in's Bett und stehen spät auf.
           Lerchen stehen früh auf und gehen früh in's Bett. </p>
         <p>Vielen Personen fällt es allerdings verflixxt schwer, gegen ihren
           Rhythmus zu schlafen. Wie viele Eulen wollten nicht schon
@@ -89,7 +88,7 @@ class Teaser extends React.Component {
           <h2>Der Taktgeber der Tiere</h2>
           <p>Das Menschen sich in ihrem inneren Taktgeber unterscheiden,
           ist nicht verwunderlich, wenn wir uns vor Augen führen,
-          dass sich Tiere dramatisch in ihrer Schlafdauer unterscheiden.
+          dass sich Tiere stark in ihrer Schlafdauer unterscheiden.
           Dabei kommt es weniger auf die Tierart als auf die Größe eines
           Tieres an. Große Tiere schlafen in der Regel kürzer
           als kleine Tiere.</p>

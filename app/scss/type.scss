@@ -1,0 +1,58 @@
+#type {
+  display: grid;
+  grid-template-columns: $padding-wrapper;
+  grid-template-rows: auto auto;
+  grid-template-areas: ". question ."
+                       ". histogram .";
+  grid-row-gap: 2rem;
+
+  @media screen and (min-width: $mid-screen) {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+
+  .question  {
+    grid-area: question;
+
+    .choice {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      justify-content: space-between;
+
+      li {
+        width: 48%;
+        height: 100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 1px solid #fff;
+        cursor: pointer;
+        filter: grayscale(80%);
+        transition: background-size 0.3s ease-in;
+
+        @media screen and (min-width: $mid-screen) {
+          height: 300px;
+          background-size: 100%;
+        }
+
+        &:hover {
+          background-size: 108%;
+        }
+
+        &:first-child {
+          background-image: url("../images/animals/lerche.jpg");
+        }
+
+        &:nth-child(2) {
+          background-image: url("../images/animals/owl.jpg");
+        }
+      }
+    }
+  }
+
+  .histogram {
+    grid-area: histogram;
+  }
+}
