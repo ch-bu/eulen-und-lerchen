@@ -1,12 +1,12 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
+import Histogram from './histogram.jsx';
 
 class Type extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {'animal': null};
-
+    this.state = {'animal': null, 'showHistogram': false};
     this.chooseAnimal = this.chooseAnimal.bind(this);
   }
 
@@ -31,15 +31,18 @@ class Type extends React.Component {
 
         </section>
         <section className="histogram">
-          <h2>Histogram</h2>
+          {this.state.showHistogram ? <Histogram animal={this.state.animal}/> : null}
         </section>
       </div>
     )
   }
 
   chooseAnimal(animal) {
-    this.setState({'animal': animal.target.getAttribute('data-animal')}, () => {
-      console.log('callbakc');
+    this.setState({'animal': animal.target.getAttribute('data-animal'),
+                   'showHistogram': true}, () => {
+      // Scroll histogram into view
+      var element = document.getElementsByClassName('histogram')[0];
+      element.scrollIntoView({behavior: 'smooth'});
     });
   }
 }

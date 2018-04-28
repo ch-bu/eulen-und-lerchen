@@ -107,7 +107,7 @@ class Teaser extends React.Component {
           extremen Eulen wiederum schlafen Nacht für Nacht so lange
           wie ein Hund. Was ist aber dran an dem Gedanken, dass
           sich Menschen in Eulen und Lerchen aufteilen lassen?
-          Ist die eine Hälfte der Menschen notorisch früh auf und
+          Steht die eine Hälfte der Menschen notorisch früh auf und
           die andere notorisch spät? Bleiben wir für immer eine
           Lerche oder spielt das Geschlecht oder das Alter eine
           Rolle?</p>
